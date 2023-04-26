@@ -1,0 +1,12 @@
+torchvision
+torchvision
+rich==13.3.4
+climate-learn==0.0.2
+wandb==0.15.0
+opencv-contrib-python==4.7.0.72
+opencv-python==4.7.0.72
+opencv-python-headless==4.7.0.72
+tqdm==4.65.0
+numpy
+matplotlib==3.7.1
+ipython==7.34.0
