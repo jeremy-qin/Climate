@@ -1,19 +1,24 @@
 # Climate Model Downscaling using Deep Learning
 
 Our experiments currently work on Linux and Mac (CPU only).
-The experiments works on Python 3.10.9. Other versions should work too.
+The experiments run on Python 3.10.9. Later versions ought to work fine as well.
 
-To run our experiments, please follow the following steps:
-  1) You can create a virtual environment first (optional) with python3 -m venv venv and activate it using source venv/bin/activate
+## To replicate our experiments, please follow the following steps:
+  ### 1) Create a virtual environment first (optional) with the following shell command:
+      python3 -m venv venv 
+   ### and activate it using: 
+      source venv/bin/activate
 
-  2) install all dependencies using: pip3 install -r requirements.txt
+  ### 2) Install all dependencies with: 
+      pip3 install -r requirements.txt
 
-  3) if the data is not installed, run the download.py program (IMPORTANT to change the path in the file to one where you want to store it)
-     NOTE that for downscaling we need 2 datasets (low + high resolution). This is approximately 10Gb. 
+  ### 3) If the data is not installed, run download.py (IMPORTANT to change the path in the file to one where you want to store it)
+     NOTE that for downscaling we need 2 datasets (low + high resolution). This should take approximately 10GB of storage. 
      
-  4) To run our experiments, it is important to make some changes in the state.json file where the hyperparameters are defined. 
+  ### 4) To run our experiments, it is essential to modify the dataset path in the state.json file where the hyperparameters are defined. You should make sure it matches the path of the dataset in your system. You're also free to change any of the other hyperparameters to your liking.
 
-  5) Change the path of the data, make sure the in_channels is the right value (with landcover you should +1)
+  ### 5) After changing the path, make sure the in_channels is the right value (with landcover you should increase the value by 1, since you're adding one dimension to the image).
 
-  6) After that, you only need to run the following : python3 downscaling.py -p state.json
-     Important! We used wandb (weights and biases) in our experiments. If you want to use wandb, you can uncomment one line of the code (line 303) and put      the projet and name of your run
+  ### 6) After that, you only need to execute the command: 
+      python3 downscaling.py -p state.json
+   Important! We used wandb (weights and biases) in our experiments. If you want to use wandb, you can uncomment one line of the code (line 303) and enter the projet and name of your trial.
