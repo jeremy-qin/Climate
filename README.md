@@ -20,5 +20,5 @@ The experiments run on Python 3.10.9. Later versions ought to work fine as well.
   ### 5) After changing the path, make sure the in_channels is the right value (with landcover you should increase the value by 1, since you're adding one dimension to the image). If running the baseline, keep it at 1.
 
   ### 6) After that, you only need to execute the command: 
-      python3 downscaling.py -p state.json
+      python3 code/downscaling.py -p state.json
    Important! We used wandb (weights and biases) in our experiments. If you want to use wandb, you can uncomment one line of the code (line 303) and enter the projet and name of your trial.
