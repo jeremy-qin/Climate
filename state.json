@@ -27,6 +27,6 @@
     "accelerator": "gpu",
     "seed": 0,
     "precision": 16,
-    "epochs": 5,
+    "epochs": 1,
     "baseline": true
 }
